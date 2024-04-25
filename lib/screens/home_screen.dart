@@ -1,5 +1,8 @@
 import "dart:convert";
+<<<<<<< HEAD
 import "dart:io";
+=======
+>>>>>>> dfc237f9eda67e266e99a05d22e699520bf54bcf
 
 import "package:fltr_m_001_random_meal_generator/models/meal.dart";
 import "package:flutter/material.dart";
@@ -17,7 +20,11 @@ class _HomeScreenState extends State<HomeScreen> {
   late Meal _meal;
   bool _isLoading = false;
 
+<<<<<<< HEAD
   late YoutubePlayerController? _controller;
+=======
+  late final YoutubePlayerController? _controller;
+>>>>>>> dfc237f9eda67e266e99a05d22e699520bf54bcf
 
   @override
   void initState() {
@@ -45,22 +52,37 @@ class _HomeScreenState extends State<HomeScreen> {
       map: json.decode(response.body),
     );
 
+<<<<<<< HEAD
     print(meal.youtubeUrl!);
 
     _controller = meal.youtubeUrl == null
         ? null
         : YoutubePlayerController(
             initialVideoId: meal.youtubeUrl!.split("?v=")[1],
+=======
+    setState(() {
+      _meal = meal;
+      _isLoading = false;
+    });
+    print(_meal.youtubeUrl);
+    _controller = _meal.youtubeUrl == null
+        ? null
+        : YoutubePlayerController(
+            initialVideoId: _meal.youtubeUrl!,
+>>>>>>> dfc237f9eda67e266e99a05d22e699520bf54bcf
             flags: const YoutubePlayerFlags(
               autoPlay: false,
               mute: false,
             ),
           );
+<<<<<<< HEAD
 
     setState(() {
       _meal = meal;
       _isLoading = false;
     });
+=======
+>>>>>>> dfc237f9eda67e266e99a05d22e699520bf54bcf
   }
 
   @override
@@ -168,7 +190,10 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                             const SizedBox(height: 4.0),
                             ListView(
+<<<<<<< HEAD
                               padding: EdgeInsets.zero,
+=======
+>>>>>>> dfc237f9eda67e266e99a05d22e699520bf54bcf
                               shrinkWrap: true,
                               children: _meal.ingredients
                                   .map(
@@ -210,8 +235,12 @@ class _HomeScreenState extends State<HomeScreen> {
                             const SizedBox(height: 4.0),
                             Text(_meal.instructions!),
                             const SizedBox(height: 24.0),
+<<<<<<< HEAD
                             if (_meal.youtubeUrl != null &&
                                 (Platform.isAndroid || Platform.isIOS))
+=======
+                            if (_meal.youtubeUrl != null)
+>>>>>>> dfc237f9eda67e266e99a05d22e699520bf54bcf
                               SizedBox(
                                 width: double.infinity,
                                 height: size.height * 0.5,
