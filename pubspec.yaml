@@ -25,6 +25,6 @@ flutter:
   uses-material-design: true
 
   fonts:
-    - family: Futura
+    - family: Hermit
       fonts:
-        - asset: fonts/Futura-Book.ttf
+        - asset: fonts/Hermit-Regular.otf

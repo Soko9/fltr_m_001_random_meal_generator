@@ -15,17 +15,17 @@ class MainApp extends StatelessWidget {
       title: "Random Meal Generator",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: "Futura",
+        fontFamily: "Hermit",
       ),
       home: const Stack(
         children: [
           HomeScreen(),
           Opacity(
-            opacity: 0.5,
+            opacity: 0.8,
             child: ChallengeTag(
               size: 14.0,
               radius: 2.0,
-              font: "Futura",
+              font: "Hermit",
             ),
           ),
         ],
