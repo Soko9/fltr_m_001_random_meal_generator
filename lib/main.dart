@@ -15,7 +15,7 @@ class MainApp extends StatelessWidget {
       title: "Random Meal Generator",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: "Futura",
+        fontFamily: "Hermit",
       ),
       home: const Stack(
         children: [
@@ -25,7 +25,6 @@ class MainApp extends StatelessWidget {
             child: ChallengeTag(
               size: 14.0,
               radius: 2.0,
-              font: "Futura",
             ),
           ),
         ],
