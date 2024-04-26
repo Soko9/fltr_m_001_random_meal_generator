@@ -25,10 +25,7 @@ class MainApp extends StatelessWidget {
             child: ChallengeTag(
               size: 14.0,
               radius: 2.0,
-<<<<<<< HEAD
               font: "Hermit",
-=======
->>>>>>> 422fc545c206527df06f734c9e920c89d8d9a2e5
             ),
           ),
         ],
